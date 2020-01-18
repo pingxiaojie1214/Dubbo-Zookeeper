@@ -6,16 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dubbo-interface" />
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
-        <module name="dubbointerface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="dubbo" target="1.5" />
       <module name="dubbo-consumer" target="1.8" />
+      <module name="dubbo-interface" target="1.5" />
       <module name="dubbo-provider" target="1.8" />
-      <module name="dubbointerface" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dubbo-consumer" options="-parameters" />
+      <module name="dubbo-provider" options="-parameters" />
+    </option>
   </component>
 </project>
